@@ -41,7 +41,7 @@ const Login = ({ onClose }) => {
   
 
   return (
-    <div>
+    <div className='login-page'>
       <Header/>
     <div onClick={onClose}>
       <div
@@ -50,7 +50,7 @@ const Login = ({ onClose }) => {
         }}
         className='modalContainer'
       >
-          <form className="login_panel" style={{}} onSubmit={login}>
+          <form className="login_panel" onSubmit={login}>
               <div>
               <span className="input_field">Username </span>
               <input type="text"  name="username" placeholder="Username" className="input_field" onChange={(e) => setUserName(e.target.value)}/>
