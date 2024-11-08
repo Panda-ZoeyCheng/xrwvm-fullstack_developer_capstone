@@ -66,30 +66,54 @@
 }
 
 
+/**** btn ****/
 .action_button{
-  cursor: pointer;
-  font-size: large;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  height:40px;
-  padding-left:.5cm;
-  padding-right: .5cm;
-  margin: .5cm;
+    position: relative;
+    cursor: pointer;
+    font-size: large;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    margin: 0.5cm;
+    overflow: hidden; 
+    transition: color 0.3s ease;
+}
+
+.action_button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    transition: width 0.3s ease;
+    z-index: 0;
+}
+
+.action_button:hover::before {
+    width: 100%;
+}
+
+.action_button:hover{
+    color: white;
 }
 
 .submit:hover {
   background-color: wheat;
 }
 
+
 .small_header{
   font: 30px sans-serif;
-  color:azure;
+  color:rgba(239, 239, 239, 0.8);
   margin: .5cm;
 }
 
 .username{
   font: 30px sans-serif;
-  color:azure;
+  color:rgba(239, 239, 239, 0.8);
   margin: .5cm;
   justify-content: 'flex-end';
   align-self:flex-end;
@@ -100,11 +124,25 @@
   flex-direction: column;
   margin:auto;
   margin: 0 auto;
-  width: 50%; 
+  width: 30%; 
   padding: 20px;
   flex: 1;
   justify-content:center;
   align-items: center;
   vertical-align: middle;
-  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 5%;
+}
+
+.login_panel .loginlink {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.login_panel .loginlink:hover {
+    color: #ababab !important;
+    text-decoration: underline !important;
 }

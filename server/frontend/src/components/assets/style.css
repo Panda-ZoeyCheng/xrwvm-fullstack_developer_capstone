@@ -29,13 +29,13 @@ img{
 
 .details{
   font-size: 20px;
-  color: rgb(97, 64, 128);
+  color: rgb(255, 255, 255);
   padding:20px;
 }
 
 .title{
   font-size: 20px;
-  background-color: rgb(97, 64, 128);
+  background-color: rgb(255, 255, 255);
   color: white;
   text-align: center;
   margin:20px;
@@ -43,7 +43,7 @@ img{
 }
 
 .homepage_links{
-  color:  rgb(97, 64, 128);
+  color:  rgb(255, 255, 255);
   padding: 25%;
   font-size: larger;
   }
@@ -79,48 +79,44 @@ img{
 /**** Navbar ****/
 .navcontainer {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     width: 180%;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.1); 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .navitems {
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    flex: 1;
-    justify-content: flex-start;
 }
 
 .nav-link {
-    color: white; 
+    color: white !important; 
 }
 
 .nav_item {
     margin-left: 15px;
     font-size: 20px;
-    color: white; 
+    color: white !important; 
     text-decoration: none;
 }
 
 .nav_item:hover {
-    color: #ccc; 
+    color: #7a7a7a !important; 
 }
 
 .small_header {
     font-size: 30px;
     color: white; 
     margin: 0.5cm;
-}
-
-.username{
-  font: 30px sans-serif;
-  color:rgb(255, 255, 255);
-  justify-content: 'flex-end';
-  align-self:flex-end;
-  vertical-align: middle;
 }
 
 .input_panel {
@@ -133,10 +129,31 @@ img{
   vertical-align: middle;
 }
 
-.small_header{
-  font: 30px sans-serif;
-  color:rgb(255, 255, 255);
-  margin: .5cm;
+.user-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+
+.username{
+    /* font: 30px sans-serif; */
+    font-size: 1.2rem;
+    color:rgb(255, 255, 255) !important;
+    /* justify-content: 'flex-end'; */
+    /* align-self:flex-end; */
+    /* vertical-align: middle; */
+}
+
+.logout_link{
+    color: white;
+    text-decoration: none;
+    font-size:1rem;
+}
+
+.login_link:hover{
+    color:#ccc;
+    text-decoration: underline;
 }
 
 .img_icon {

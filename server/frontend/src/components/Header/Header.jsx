@@ -3,6 +3,13 @@ import "../assets/style.css";
 import "../assets/bootstrap.min.css";
 
 const Header = () => {
+    // const [username, setUsername] = useState(null);
+
+    // useEffect(() => {
+    //     const storeUsername = sessionStorage.getItem("username");
+    //     setUsername(storeUsername);
+    // }, []);
+
     const logout = async (e) => {
     e.preventDefault();
     let logout_url = window.location.origin+"/djangoapp/logout";
@@ -13,6 +20,7 @@ const Header = () => {
     const json = await res.json();
     if (json) {
       let username = sessionStorage.getItem('username');
+    //   setUsername(null);
       sessionStorage.removeItem('username');
       window.location.href = window.location.origin;
       window.location.reload();
@@ -31,11 +39,21 @@ let curr_user = sessionStorage.getItem('username')
 
 //If the user is logged in, show the username and logout option on home page
 if ( curr_user !== null &&  curr_user !== "") {
-    home_page_items = <div className="input_panel">
-      <text className='username'>{sessionStorage.getItem("username")}</text>
-    <a className="nav-link nav_item" href="/djangoapp/logout" onClick={logout}>Logout</a>
-  </div>
+
+// if (username) {
+    home_page_items = (
+    <div className="user-controls">
+      <div className='username'>👋, {sessionStorage.getItem("username")}</div>
+      {/* <div className='username'>👋, {username}</div> */}
+      <a className="nav-link nav_item" href="/djangoapp/logout" onClick={logout}>Logout</a>
+    </div>
+    );
+} else {
+    home_page_items = (
+        <a className="login_link nav-link" href="/login">Login</a>
+    );
 }
+
     return (
         <div className='navcontainer'>
           <nav class="navbar navbar-expand-lg">
@@ -58,7 +76,7 @@ if ( curr_user !== null &&  curr_user !== "") {
                 </ul>
                 <span class="navbar-text">
                   <div class="loginlink" id="loginlogout">
-                  {home_page_items}
+                    {home_page_items}
                   </div>
                   </span>
               </div>

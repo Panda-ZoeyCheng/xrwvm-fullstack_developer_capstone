@@ -129,13 +129,13 @@ img{
 
 .details{
   font-size: 20px;
-  color: rgb(97, 64, 128);
+  color: rgb(255, 255, 255);
   padding:20px;
 }
 
 .title{
   font-size: 20px;
-  background-color: rgb(3, 3, 3);
+  background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
   margin:20px;
@@ -145,7 +145,7 @@ img{
 
 /**** Home ******/
 .homepage_links{
-  color:  rgb(97, 64, 128);
+  color:  rgb(255, 255, 255);
   padding: 25%;
   font-size: larger;
   }
@@ -182,13 +182,13 @@ img{
 .navbar h2,
 .navbar-text,
 .loginlink a {
-    color: white;
+    color: white !important;
 }
 
 .navbar .nav-link.active {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid white !important;
     padding-bottom: 4px; 
-    color: white; 
+    color: white !important; 
 }
 
 .navbar .nav-link:hover {
